@@ -4,7 +4,7 @@ using Combinatorics: combinations
 
 function problem12()
 
-    limits = 5
+    limits = 500
     keep_going = true
     i = 2
     while keep_going
@@ -15,7 +15,7 @@ function problem12()
             i += 1
         end
     end
-    return i
+    return sum(1:i)
 end
 
 problem12()

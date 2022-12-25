@@ -37,12 +37,13 @@ function problem10()
             row_maximum = maximum(prod(cutout_matrix, dims=1))
             col_maximum = maximum(prod(cutout_matrix, dims=2))
             diagonal = prod(diag(cutout_matrix))
-            reverse_diagonal = [cutout_matrix[k, cutout_matrix_size-k+1] for k = 1:cutout_matrix_size]
+            reverse_diagonal = prod([cutout_matrix[k, cutout_matrix_size-k+1] for k = 1:cutout_matrix_size])
 
             greatest_product = maximum(
                 [
                 greatest_product,
-                current_product,
+                row_maximum,
+                col_maximum,
                 diagonal,
                 reverse_diagonal]
             )

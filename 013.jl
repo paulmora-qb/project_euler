@@ -106,3 +106,5 @@ function problem13()
     summation = sum([parse(Int64, first(x, 15)) for x in split(string_input, "\n") if x != ""])
     return first(string(summation), 10)
 end
+
+problem13()
