@@ -5,7 +5,7 @@ using Combinatorics: combinations
 
 function amicable_number(number)
     combinations_primes = Set(collect(combinations(factor(Vector, number))))
-    products = append!([prod(x) for x in combinations_primes])
+    products = [prod(x) for x in combinations_primes]
     products = filter!(x -> x ≠ number, products)
     return sum(products) + 1
 end
